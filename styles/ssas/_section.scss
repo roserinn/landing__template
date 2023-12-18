@@ -1,0 +1,23 @@
+section {
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.section__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container__infoBlock {
+  margin-right: 50px;
+  text-align: left;
+  width: 400px;
+}
+
+.container__img {
+  background-color: #003444;
+  width: 400px;
+  height: 400px;
+}
