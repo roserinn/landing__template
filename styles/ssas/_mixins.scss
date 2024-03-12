@@ -1,0 +1,22 @@
+@mixin button($border-radius, $padding, $background-color, $color, $hover-color) {
+    border-radius: $border-radius;
+    color: $color;
+    background-color: $background-color;
+    padding: $padding;
+    transition: background-color 0.2s ease;
+
+    @media (hover:hover) {
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+
+    @media (hover:none) {
+        &:active {
+            background-color: $hover-color;
+        }
+    }
+} 
+
+
+

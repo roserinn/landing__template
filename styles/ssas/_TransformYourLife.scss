@@ -1,0 +1,158 @@
+.transformYourLife {
+    &__container {
+        width: 1400px;
+        margin: 0 auto;
+        padding: 150px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &__subtitle {
+            color: $light-gray;
+            font-size: $h6;
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            font-size: $h3;
+            font-weight: 800;
+            color: $title-color;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            width: 650px;
+            color: $gray;
+            font-size: $h4;
+            line-height: 24px;
+            margin-bottom: 60px;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 70px 30px;
+
+            &__card {
+                width: 360px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &__icon {
+                    height: 48px;
+                    width: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: $off-white;
+                    margin-bottom: 15px;
+                }
+
+                &__title {
+                    color: $title-color;
+                    font-size: $h4;
+                    margin-bottom: 15px;
+                    font-weight: 700;
+                }
+
+                &__text {
+                    color: $gray;
+                    font-size: $h5;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+
+@include desktop() {
+    .transformYourLife {
+        &__container {
+            width: 1000px;
+            padding: 130px 0;
+
+            &__text {
+                width: 630px;
+                margin-bottom: 50px;
+            }
+
+            &__cards {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 60px 25px;
+
+                &__card {
+                    width: 300px;
+
+                    &__icon {
+                        height: 46px;
+                        width: 46px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet() {
+    .transformYourLife {
+        &__container {
+            width: 800px;
+            padding: 100px 0;
+
+            &__text {
+                width: 600px;
+            }
+
+            &__cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 80px 25px;
+
+                &__card {
+                    width: 300px;
+
+                    &__icon {
+                        height: 45px;
+                        width: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile() {
+    .transformYourLife {
+        &__container {
+            width: 350px;
+            margin-top: 70px;
+            &__text {
+                width: 100%;
+                font-size: $h6;
+                margin-bottom: 70px;
+            }
+
+            &__cards {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 40px 25px;
+
+                &__card {
+                    width: 100%;
+
+                    &__icon {
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    &__text {
+                        font-size: $h6;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,577 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0C111D;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.header {
+  background-color: #FFFFFF;
+}
+.header__container {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__container__burger {
+  display: none;
+}
+.header__container__navList {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.header__container__navList a {
+  color: #4A556C;
+}
+.header__container__navList__button {
+  border-radius: 4px;
+  color: #FFFFFF;
+  background-color: #20AD96;
+  padding: 10px 16px;
+  transition: background-color 0.2s ease;
+}
+@media (hover: hover) {
+  .header__container__navList__button:hover {
+    background-color: #146356;
+  }
+}
+@media (hover: none) {
+  .header__container__navList__button:active {
+    background-color: #146356;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__container {
+    width: 1050px;
+  }
+  .header__container__navList__button {
+    border-radius: 4px;
+    color: #FFFFFF;
+    background-color: #20AD96;
+    padding: 9px 14px;
+    transition: background-color 0.2s ease;
+  }
+}
+@media (max-width: 1200px) and (hover: hover) {
+  .header__container__navList__button:hover {
+    background-color: #146356;
+  }
+}
+@media (max-width: 1200px) and (hover: none) {
+  .header__container__navList__button:active {
+    background-color: #146356;
+  }
+}
+@media (max-width: 900px) {
+  .header__container {
+    width: 700px;
+  }
+  .header__container__burger {
+    display: block;
+  }
+  .header__container__burger img {
+    cursor: pointer;
+  }
+  .header__container__navList {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header__container {
+    width: 350px;
+  }
+}
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #20AD96;
+  padding: 60px 25px;
+  z-index: 4;
+  box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.634);
+  opacity: 0;
+  display: none;
+  transition: all 0.5s ease;
+}
+.menu__list li {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.menu__list li a {
+  color: #FFFFFF;
+}
+.menu__list li button {
+  border-radius: 10px;
+  color: #0C111D;
+  background-color: #FFFFFF;
+  padding: 10px 16px;
+  transition: background-color 0.2s ease;
+}
+@media (hover: hover) {
+  .menu__list li button:hover {
+    background-color: #c1d9ff;
+  }
+}
+@media (hover: none) {
+  .menu__list li button:active {
+    background-color: #c1d9ff;
+  }
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.407);
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  z-index: 3;
+  opacity: 0;
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.esteemTherapy {
+  background-color: #FAF8F6;
+}
+.esteemTherapy__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.esteemTherapy__container__vector {
+  position: absolute;
+  top: 50px;
+  left: -80px;
+}
+.esteemTherapy__container__info {
+  width: 545px;
+}
+.esteemTherapy__container__info span {
+  color: #b7b7b7;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.esteemTherapy__container__info h1 {
+  font-size: 4.5rem;
+  line-height: 86.4px;
+  font-weight: 800;
+  color: #333461;
+  margin-bottom: 20px;
+}
+.esteemTherapy__container__info p {
+  color: #4A556C;
+  font-size: 1rem;
+  line-height: 28.8px;
+  margin-bottom: 30px;
+}
+.esteemTherapy__container__info button {
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #20AD96;
+  padding: 10px 60px;
+  transition: background-color 0.2s ease;
+}
+@media (hover: hover) {
+  .esteemTherapy__container__info button:hover {
+    background-color: #146356;
+  }
+}
+@media (hover: none) {
+  .esteemTherapy__container__info button:active {
+    background-color: #146356;
+  }
+}
+.esteemTherapy__container__img {
+  max-width: 400px;
+  margin-bottom: -130px;
+}
+
+@media (max-width: 1200px) {
+  .esteemTherapy__container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 90px 0;
+  }
+  .esteemTherapy__container__vector {
+    position: absolute;
+    top: 60px;
+    left: -30px;
+    width: 70px;
+  }
+  .esteemTherapy__container__info {
+    width: 500px;
+  }
+  .esteemTherapy__container__info span {
+    margin-bottom: 18px;
+  }
+  .esteemTherapy__container__info h1 {
+    font-size: 3.5rem;
+    line-height: 60px;
+    margin-bottom: 18px;
+  }
+  .esteemTherapy__container__info p {
+    line-height: 26px;
+    margin-bottom: 28px;
+  }
+  .esteemTherapy__container__info button {
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #20AD96;
+    padding: 10px 50px;
+    transition: background-color 0.2s ease;
+  }
+}
+@media (max-width: 1200px) and (hover: hover) {
+  .esteemTherapy__container__info button:hover {
+    background-color: #146356;
+  }
+}
+@media (max-width: 1200px) and (hover: none) {
+  .esteemTherapy__container__info button:active {
+    background-color: #146356;
+  }
+}
+@media (max-width: 1200px) {
+  .esteemTherapy__container__img {
+    max-width: 380px;
+    margin-bottom: -120px;
+  }
+}
+@media (max-width: 900px) {
+  .esteemTherapy__container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .esteemTherapy__container__vector {
+    position: absolute;
+    top: 50px;
+    left: 45%;
+  }
+  .esteemTherapy__container__info {
+    width: 80%;
+    text-align: center;
+  }
+  .esteemTherapy__container__info span {
+    color: #b7b7b7;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .esteemTherapy__container__info h1 {
+    font-size: 3.5rem;
+    line-height: 60px;
+    margin: 20px 0;
+  }
+  .esteemTherapy__container__info p {
+    color: #4A556C;
+    font-size: 0.9rem;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+  .esteemTherapy__container__info button {
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #20AD96;
+    padding: 15px 80px;
+    transition: background-color 0.2s ease;
+  }
+}
+@media (max-width: 900px) and (hover: hover) {
+  .esteemTherapy__container__info button:hover {
+    background-color: #146356;
+  }
+}
+@media (max-width: 900px) and (hover: none) {
+  .esteemTherapy__container__info button:active {
+    background-color: #146356;
+  }
+}
+@media (max-width: 900px) {
+  .esteemTherapy__container__img {
+    max-width: 500px;
+    margin: 70px 0 -130px;
+  }
+}
+@media (max-width: 600px) {
+  .esteemTherapy__container {
+    width: 350px;
+    padding: 80px 0;
+  }
+  .esteemTherapy__container__vector {
+    position: absolute;
+    top: 50px;
+    left: 40%;
+  }
+  .esteemTherapy__container__info {
+    width: 100%;
+  }
+  .esteemTherapy__container__info span {
+    font-size: 0.8rem;
+  }
+  .esteemTherapy__container__info h1 {
+    font-size: 1.875rem;
+    line-height: 30px;
+  }
+  .esteemTherapy__container__info p {
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+  .esteemTherapy__container__info button {
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #20AD96;
+    padding: 10px 50px;
+    transition: background-color 0.2s ease;
+  }
+}
+@media (max-width: 600px) and (hover: hover) {
+  .esteemTherapy__container__info button:hover {
+    background-color: #146356;
+  }
+}
+@media (max-width: 600px) and (hover: none) {
+  .esteemTherapy__container__info button:active {
+    background-color: #146356;
+  }
+}
+@media (max-width: 600px) {
+  .esteemTherapy__container__img {
+    max-width: 300px;
+    margin: 50px 0 -100px;
+  }
+}
+.transformYourLife__container {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.transformYourLife__container__subtitle {
+  color: #b7b7b7;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.transformYourLife__container__title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #333461;
+  margin-bottom: 20px;
+}
+.transformYourLife__container__text {
+  width: 650px;
+  color: #4A556C;
+  font-size: 1.2rem;
+  line-height: 24px;
+  margin-bottom: 60px;
+}
+.transformYourLife__container__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 30px;
+}
+.transformYourLife__container__cards__card {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.transformYourLife__container__cards__card__icon {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #FAF8F6;
+  margin-bottom: 15px;
+}
+.transformYourLife__container__cards__card__title {
+  color: #333461;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.transformYourLife__container__cards__card__text {
+  color: #4A556C;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+@media (max-width: 1200px) {
+  .transformYourLife__container {
+    width: 1000px;
+    padding: 130px 0;
+  }
+  .transformYourLife__container__text {
+    width: 630px;
+    margin-bottom: 50px;
+  }
+  .transformYourLife__container__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 25px;
+  }
+  .transformYourLife__container__cards__card {
+    width: 300px;
+  }
+  .transformYourLife__container__cards__card__icon {
+    height: 46px;
+    width: 46px;
+  }
+}
+@media (max-width: 900px) {
+  .transformYourLife__container {
+    width: 800px;
+    padding: 100px 0;
+  }
+  .transformYourLife__container__text {
+    width: 600px;
+  }
+  .transformYourLife__container__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 25px;
+  }
+  .transformYourLife__container__cards__card {
+    width: 300px;
+  }
+  .transformYourLife__container__cards__card__icon {
+    height: 45px;
+    width: 45px;
+  }
+}
+@media (max-width: 600px) {
+  .transformYourLife__container {
+    width: 350px;
+    margin-top: 70px;
+  }
+  .transformYourLife__container__text {
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 70px;
+  }
+  .transformYourLife__container__cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px 25px;
+  }
+  .transformYourLife__container__cards__card {
+    width: 100%;
+  }
+  .transformYourLife__container__cards__card__icon {
+    height: 40px;
+    width: 40px;
+  }
+  .transformYourLife__container__cards__card__text {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=style.css.map */

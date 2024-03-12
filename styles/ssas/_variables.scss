@@ -10,18 +10,29 @@ $ui-index-5: 5; //for modal windows
 $ui-index-6: 6; //for modal windows
 
 //colors 
-
+$white: #FFFFFF;
+$off-white: #FAF8F6;
+$dark-blue: #0C111D;
+$gray: #4A556C;
+$light-gray: #b7b7b7;
+$title-color: #333461;
+$complementary-600: #20AD96;
 
 // ----------------------------------------------------------------------------------------------------------------------
 
-// other
-
+// typography
+$h1: 4.5rem; 
+$h2: 3.5rem; 
+$h3: 1.875rem; 
+$h4: 1.2rem; 
+$h5: 1rem; 
+$h6: .9rem;
 
 // ----------------------------------------------------------------------------------------------------------------------
 
 // @media  
-$ui-mobile: '500px';
-$ui-tablet: '1000px';
+$ui-mobile: '600px';
+$ui-tablet: '900px';
 $ui-desktop: '1200px';
 
 

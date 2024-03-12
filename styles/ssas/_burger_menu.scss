@@ -1,0 +1,42 @@
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $complementary-600;
+    padding: 60px 25px;
+    z-index: $ui-index-4;
+    box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.634);
+    opacity: 0;
+    display: none;
+    transition: all .5s ease;
+
+    &__list {
+        li {
+            margin-bottom: 20px;
+            font-size: $h4;
+            text-align: center;
+
+            a {
+                color: $white;
+            }
+
+            button {
+                @include button(10px, 10px 16px, $white, $dark-blue, #c1d9ff)
+            }
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.407);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: $ui-index-3;
+    opacity: 0;
+    display: none;
+    transition: all .5s ease;
+}

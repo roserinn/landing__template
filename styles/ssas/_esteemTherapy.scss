@@ -1,0 +1,195 @@
+.esteemTherapy {
+    background-color: $off-white;
+
+    &__container {
+
+        width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &__vector {
+            position: absolute;
+            top: 50px;
+            left: -80px;
+        }
+
+        &__info {
+            width: 545px;
+
+            span {
+                color: $light-gray;
+                font-size: $h6;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: $h1;
+                line-height: 86.4px;
+                font-weight: 800;
+                color: $title-color;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: $gray;
+                font-size: $h5;
+                line-height: 28.8px;
+                margin-bottom: 30px;
+            }
+
+            button {
+                @include button(10px, 10px 60px, $complementary-600, $white, #146356)
+            }
+        }
+
+        &__img {
+            max-width: 400px;
+            margin-bottom: -130px;
+        }
+    }
+}
+
+
+@include desktop() {
+    .esteemTherapy {
+        &__container {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 90px 0;
+
+            &__vector {
+                position: absolute;
+                top: 60px;
+                left: -30px;
+                width: 70px;
+            }
+
+            &__info {
+                width: 500px;
+
+                span {
+                    margin-bottom: 18px;
+                }
+
+                h1 {
+                    font-size: $h2;
+                    line-height: 60px;
+                    margin-bottom: 18px;
+                }
+
+                p {
+                    line-height: 26px;
+                    margin-bottom: 28px;
+                }
+
+                button {
+                    @include button(10px, 10px 50px, $complementary-600, $white, #146356)
+                }
+            }
+
+            &__img {
+                max-width: 380px;
+                margin-bottom: -120px;
+            }
+        }
+    }
+}
+
+@include tablet() {
+    .esteemTherapy {
+        &__container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 100px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            &__vector {
+                position: absolute;
+                top: 50px;
+                left: 45%;
+            }
+
+            &__info {
+                width: 80%;
+                text-align: center;
+
+                span {
+                    color: $light-gray;
+                    font-size: $h6;
+                    margin-bottom: 20px;
+                }
+
+                h1 {
+                    font-size: $h2;
+                    line-height: 60px;
+                    margin: 20px 0;
+                }
+
+                p {
+                    color: $gray;
+                    font-size: $h6;
+                    line-height: 25px;
+                    margin-bottom: 30px;
+                }
+
+                button {
+                    @include button(10px, 15px 80px, $complementary-600, $white, #146356)
+                }
+            }
+
+            &__img {
+                max-width: 500px;
+                margin: 70px 0 -130px;
+            }
+        }
+    }
+}
+
+@include mobile() {
+    .esteemTherapy {
+        &__container {
+            width: 350px;
+            padding: 80px 0;
+
+            &__vector {
+                position: absolute;
+                top: 50px;
+                left: 40%;
+            }
+
+            &__info {
+                width: 100%;
+
+                span {
+                    font-size: .8rem;
+                }
+
+                h1 {
+                    font-size: $h3;
+                    line-height: 30px;
+                }
+
+                p {
+                    line-height: 25px;
+                    margin-bottom: 30px;
+                }
+
+                button {
+                    @include button(10px, 10px 50px, $complementary-600, $white, #146356)
+                }
+            }
+
+            &__img {
+                max-width: 300px;
+                margin: 50px 0 -100px;
+            }
+        }
+    }
+}

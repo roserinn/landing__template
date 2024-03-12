@@ -1,16 +1,71 @@
-header {
-  background-color: #003444;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.header {
+  background-color: $white;
 
-  nav {
-    display: inline-block;
+  &__container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
+    &__burger {
+        display: none;
+    }
+
+    &__navList {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+
+      a {
+        color: $gray;
+      }
+
+      &__button {
+        @include button(4px, 10px 16px, $complementary-600, $white, #146356)
+      }
+    }
+  }
+}
+
+@include desktop() {
+  .header {
+    &__container {
+      width: 1050px;
+
+      &__navList {
+        &__button {
+          @include button(4px, 9px 14px, $complementary-600, $white, #146356)
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .header {
+    &__container {
+      width: 700px;
+ 
+      &__burger {
+          display: block;
+          img {
+            cursor: pointer;
+          }
+      }
+
+      &__navList {
+        display: none;
+      }
+    }
+  }
+}
+ 
+@include mobile() {
+  .header {
+    &__container {
+      width: 350px;
     }
   }
 }
